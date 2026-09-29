@@ -41,7 +41,7 @@ footer { margin-top:40px; color:var(--muted); font-size:15px; border-top:1px sol
 <p class="updated">Son güncelleme: 29 Eylül 2026</p>
 
 <div class="box">
-  <strong>Kısaca:</strong> Neuro hesap açmadan tamamen çevrimdışı çalışır ve egzersiz verilerin yalnızca cihazında kalır. Bulut hesabı isteğe bağlıdır; açarsan e-postan, görünen adın, avatarın ve Arena ELO puanın yurt dışındaki Supabase sunucularında saklanır. Arka planda bulut eşitlemesi yapılmaz. Verilerini satmayız.
+  <strong>Kısaca:</strong> Neuro hesap açmadan tamamen çevrimdışı çalışır ve egzersiz verilerin yalnızca cihazında kalır. Bulut hesabı isteğe bağlıdır; açarsan e-postan, görünen adın, avatarın, üç puan toplamın (Egzersiz, Arena, Oyun), günlük serin ve Arena ELO puanın yurt dışındaki Supabase sunucularında saklanır. Görünen ad, avatar, puan toplamları, seri ve ELO sıralamalarda ve oyuncu profilinde tüm oyunculara görünür. Gerçek adın-soyadın ile sağlık ve fiziksel bilgilerin cihazında kalır. Arka planda bulut eşitlemesi yapılmaz. Verilerini satmayız.
 </div>
 
 <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) md. 10 uyarınca aydınlatma yükümlülüğünü yerine getirmek ve Neuro mobil uygulamasının (“Uygulama”) gizlilik uygulamalarını açıklamak için hazırlanmıştır. Uygulama ilk sürümde yalnızca Türkiye'de dağıtılmaktadır.</p>
@@ -58,7 +58,7 @@ E-posta: <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a><
   <li>Ad ve soyad; isteğe bağlı olarak yaş, boy ve kilo,</li>
   <li>başlangıç hedeflerin ve kalibrasyon sonuçların,</li>
   <li>egzersiz sonuçları, tepki süreleri ve bilişsel alan skorları,</li>
-  <li>skorlar, puanlar, seriler, oyun seviyeleri ve Arena maç sonuçları,</li>
+  <li>skorlar, puanlar, seriler, oyun seviyeleri ve Arena maç sonuçları (hesabın varsa yalnızca üç puan toplamın ve günlük seri sayın sıralama için buluta da gönderilir, bkz. 2.2),</li>
   <li>hatırlatma saati ve uygulama ayarları (ses, yazı boyutu, kontrast vb.).</li>
 </ul>
 <p>Amaç: sana özel antrenman programı, ilerleme takibi ve zorluk ayarı. <strong>Bilişsel Gelişim Raporu (PDF)</strong> cihazında oluşturulur; yalnızca sen paylaşmayı seçersen (ör. e-posta ya da mesajla) cihazdan çıkar.</p>
@@ -68,17 +68,18 @@ E-posta: <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a><
 <ul>
   <li>e-posta adresi ve kullanıcı kimliği,</li>
   <li>şifre: Supabase tarafından tek yönlü şifrelenmiş (hash) olarak saklanır, geliştirici göremez,</li>
-  <li>görünen ad: kayıtta girdiğin ad ve soyad,</li>
+  <li>görünen ad: sıralamada kullandığın takma ad. Varsayılanı adın ve soyadının baş harfidir (ör. “Ayşe Y.”), ad girmediysen “Oyuncu” ve 4 rakamdır; Hesabım ekranından istediğin an değiştirebilirsin,</li>
   <li>avatar fotoğrafı: yalnızca yüklersen,</li>
+  <li>egzersiz, Arena ve oyun puanı toplamların ile günlük seri sayın,</li>
   <li>Arena ELO puanı ve profilin son güncellenme zamanı.</li>
 </ul>
-<p>Amaç: hesabı oluşturmak ve oturum açmak, e-posta doğrulama ve şifre sıfırlama kodlarını göndermek, Arena ve liderlik tablosunda profilini göstermek. <strong>Görünen adın, avatarın ve ELO puanın diğer oyunculara görünür.</strong> Avatar fotoğrafı herkese açık bir bağlantı üzerinden sunulur; kimliğini ortaya koymasını istemediğin bir fotoğraf seçmemeni öneririz.</p>
+<p>Amaç: hesabı oluşturmak ve oturum açmak, e-posta doğrulama ve şifre sıfırlama kodlarını göndermek, Arena'da ve liderlik tablosunda (sıralamada) profilini göstermek. Puan toplamların ve serin; uygulamayı açtığında, sıralamayı açtığında ve puan kazandığında güncellenir. <strong>Görünen adın, avatarın, üç puan toplamın, serin ve Arena ELO puanın sıralamalarda ve oyuncu profilinde tüm oyunculara görünür.</strong> Gerçek adın ve soyadın, yaşın, boyun, kilon, egzersiz ayrıntıların ve bilişsel skorların sıralamaya ve profile gönderilmez; cihazında kalır. Avatar fotoğrafı herkese açık bir bağlantı üzerinden sunulur; kimliğini ortaya koymasını istemediğin bir fotoğraf ya da ad seçmemeni öneririz.</p>
 
 <h3>2.3 Arena canlı maçları ve sohbet</h3>
 <p>Arena'da çevrimiçi rakip aradığında, hesabın olmasa da aşağıdaki bilgiler Supabase Realtime üzerinden eşleştiğin oyuncuya <strong>anlık</strong> iletilir:</p>
 <ul>
   <li>rastgele oluşturulmuş oyuncu kimliğin,</li>
-  <li>görünen adın: cihazdaki profil adın,</li>
+  <li>görünen adın: hesabın varsa sıralamadaki görünen adın; yoksa adının baş harfiyle kısaltılmış hâli (ör. “Ayşe Y.”) ya da “Oyuncu1234” gibi bir takma ad. Gerçek adın ve soyadın rakibe gönderilmez,</li>
   <li>Arena puanın ve seçtiğin tema,</li>
   <li>maç sırasındaki hamleler ve skorlar,</li>
   <li>hazır sohbet ifadeleri ile yazdığın sohbet mesajları.</li>
@@ -91,17 +92,14 @@ E-posta: <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a><
 <h3>2.5 Abonelikler ve satın almalar (Google Play, RevenueCat)</h3>
 <p>Pro abonelik ve tema satın almaları <strong>Google Play Faturalandırma</strong> ile yapılır. Abonelik durumunu doğrulamak için RevenueCat hizmeti kullanılır; RevenueCat'e satın alma durumu, ürün bilgisi ve <strong>anonim bir uygulama kullanıcı kimliği</strong> iletilir. Kart ve ödeme bilgilerin yalnızca Google tarafından işlenir, <strong>geliştiriciye hiçbir kart bilgisi ulaşmaz</strong>.</p>
 
-<h3>2.6 Yazı tipleri (Google Fonts)</h3>
-<p>Uygulamanın yazı tipi (Inter) ilk kullanımda Google Fonts sunucularından indirilebilir. Bu sırada IP adresin ve teknik cihaz bilgileri Google'a iletilir. İndirilen yazı tipi cihazda önbelleğe alınır.</p>
-
-<h3>2.7 Bildirimler, fotoğraflar ve arka plan</h3>
+<h3>2.6 Bildirimler, fotoğraflar ve arka plan</h3>
 <ul>
   <li><strong>Bildirimler:</strong> Yalnızca cihazında planlanan yerel hatırlatmalar kullanılır. Push bildirim sunucusu yoktur.</li>
   <li><strong>Fotoğraflar:</strong> Fotoğraf galerine yalnızca avatar seçtiğinde, senin seçtiğin fotoğraf için erişilir. Kamera kullanılmaz.</li>
-  <li><strong>Arka plan eşitleme:</strong> Kapalıdır. Egzersiz verilerin buluta gönderilmez.</li>
+  <li><strong>Arka plan eşitleme:</strong> Kapalıdır. Egzersiz verilerin buluta gönderilmez; hesabın varsa yalnızca sıralama için puan toplamların ve serin gönderilir (bkz. 2.2).</li>
 </ul>
 
-<h3>2.8 Destek yazışmaları</h3>
+<h3>2.7 Destek yazışmaları</h3>
 <p>Bize e-posta gönderirsen, e-posta adresini ve mesajının içeriğini yalnızca talebini yanıtlamak için işleriz.</p>
 
 <h2>3. Hukuki sebepler</h2>
@@ -117,8 +115,8 @@ E-posta: <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a><
 <h2>4. Veriler nerede saklanır?</h2>
 <table class="table">
   <tr><th>Veri</th><th>Yer</th></tr>
-  <tr><td>Profil, egzersiz sonuçları, skorlar, seviyeler, ayarlar</td><td>Yalnızca cihazın</td></tr>
-  <tr><td>E-posta, şifre (hash), görünen ad, avatar, Arena ELO</td><td>Supabase (yurt dışı)</td></tr>
+  <tr><td>Ad-soyad, yaş, boy, kilo, egzersiz sonuçları, bilişsel skorlar, seviyeler, ayarlar</td><td>Yalnızca cihazın</td></tr>
+  <tr><td>E-posta, şifre (hash), görünen ad, avatar, üç puan toplamı, günlük seri, Arena ELO</td><td>Supabase (yurt dışı)</td></tr>
   <tr><td>Arena hamleleri ve sohbet</td><td>Supabase Realtime üzerinden anlık iletim, kalıcı saklama yok</td></tr>
   <tr><td>Reklam verileri</td><td>Google (yurt dışı)</td></tr>
   <tr><td>Satın alma durumu</td><td>Google Play ve RevenueCat (yurt dışı)</td></tr>
@@ -127,7 +125,7 @@ E-posta: <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a><
 <h2>5. Verilerin aktarıldığı üçüncü taraflar</h2>
 <ul>
   <li><strong>Supabase Inc.:</strong> hesap, veritabanı, dosya depolama ve Realtime altyapısı. <a href="https://supabase.com/privacy" rel="noopener">Gizlilik politikası</a></li>
-  <li><strong>Google LLC / Google Ireland Ltd.:</strong> AdMob reklamları, Google Play Faturalandırma ve Google Fonts. <a href="https://policies.google.com/privacy" rel="noopener">Gizlilik politikası</a></li>
+  <li><strong>Google LLC / Google Ireland Ltd.:</strong> AdMob reklamları ve Google Play Faturalandırma. <a href="https://policies.google.com/privacy" rel="noopener">Gizlilik politikası</a></li>
   <li><strong>RevenueCat Inc.:</strong> abonelik doğrulama. <a href="https://www.revenuecat.com/privacy" rel="noopener">Gizlilik politikası</a></li>
 </ul>
 <p>Bunların dışında kişisel verilerin yalnızca yasal bir zorunluluk olduğunda yetkili kamu kurumlarıyla paylaşılır. Verilerin satılmaz ve reklam amacıyla geliştirici tarafından profillenmez.</p>
@@ -157,7 +155,7 @@ E-posta: <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a><
 <p><strong>Nasıl başvurursun?</strong> Hesabına kayıtlı e-posta adresinden <a href="mailto:destekneuroapp@gmail.com?subject=KVKK%20Ba%C5%9Fvurusu">destekneuroapp@gmail.com</a> adresine, konu satırına “KVKK Başvurusu” yazarak talebini ilet. Başvurun en geç <strong>30 gün</strong> içinde ücretsiz olarak sonuçlandırılır. Yanıttan memnun kalmazsan Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsin. Cihazındaki verileri ise istediğin an kendin silebilirsin (bkz. <a href="hesap-silme.html">Hesap Silme</a>).</p>
 
 <h2>8. Güvenlik</h2>
-<p>Sunucularla iletişim şifreli bağlantı (HTTPS/TLS) üzerinden yapılır. Şifreler tek yönlü olarak saklanır. Veritabanı kuralları her kullanıcının yalnızca kendi profilini ve avatarını değiştirebilmesine izin verir. Hiçbir sistem %100 güvenli değildir. Bir güvenlik ihlali olursa KVKK md. 12 uyarınca ilgili kişileri ve Kurulu bilgilendiririz.</p>
+<p>Sunucularla iletişim şifreli bağlantı (HTTPS/TLS) üzerinden yapılır. Şifreler tek yönlü olarak saklanır. Veritabanı kuralları her kullanıcının yalnızca kendi profilini, puanlarını ve avatarını değiştirebilmesine izin verir; hesabı olmayanlar sıralamayı yalnızca görüntüleyebilir. Hiçbir sistem %100 güvenli değildir. Bir güvenlik ihlali olursa KVKK md. 12 uyarınca ilgili kişileri ve Kurulu bilgilendiririz.</p>
 
 <h2>9. Çocuklar</h2>
 <p>Neuro yetişkinler için tasarlanmıştır ve <strong>13 yaşından küçük çocuklara yönelik değildir</strong>. 13 yaşından küçük bir çocuğa ait bulut verisi işlediğimizi fark edersek bu veriyi sileriz.</p>
