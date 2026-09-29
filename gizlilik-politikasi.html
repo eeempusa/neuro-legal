@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neuro — Gizlilik Politikası ve KVKK Aydınlatma Metni</title>
+<meta name="description" content="Neuro uygulamasının Gizlilik Politikası ve 6698 sayılı KVKK kapsamında Aydınlatma Metni.">
+<style>
+:root { --bg:#08182E; --surface:#163A5E; --line:#295380; --text:#F2F8FB; --muted:#AFC6DA; --accent:#22D3EE; --warn:#FFC53D; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; font-size:18px; line-height:1.65; }
+.wrap { max-width:820px; margin:0 auto; padding:20px 18px 48px; }
+nav { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+nav a { color:var(--text); text-decoration:none; border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:16px; }
+nav a[aria-current="page"] { border-color:var(--accent); background:rgba(34,211,238,.12); }
+h1 { font-size:28px; line-height:1.25; margin:8px 0 6px; }
+h2 { font-size:22px; color:var(--accent); margin:32px 0 8px; }
+h3 { font-size:19px; margin:20px 0 6px; }
+.updated { color:var(--muted); font-size:15px; margin:0 0 24px; }
+a { color:var(--accent); }
+ul { padding-left:22px; }
+li { margin:6px 0; }
+.box { background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:16px 20px; margin:16px 0; }
+.note { border-left:4px solid var(--warn); background:rgba(255,197,61,.08); padding:12px 16px; border-radius:8px; color:var(--muted); }
+.table { width:100%; border-collapse:collapse; font-size:16px; margin:12px 0; }
+.table th, .table td { border:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; }
+.table th { background:var(--surface); }
+footer { margin-top:40px; color:var(--muted); font-size:15px; border-top:1px solid var(--line); padding-top:16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="gizlilik-politikasi.html" aria-current="page">Gizlilik Politikası</a>
+  <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+  <a href="hesap-silme.html">Hesap Silme</a>
+</nav>
+
+<h1>Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
+<p class="updated">Son güncelleme: 29 Eylül 2026</p>
+
+<div class="box">
+  <strong>Kısaca:</strong> Neuro hesap açmadan tamamen çevrimdışı çalışır ve egzersiz verilerin yalnızca cihazında kalır. Bulut hesabı isteğe bağlıdır; açarsan e-postan, görünen adın, avatarın ve Arena ELO puanın yurt dışındaki Supabase sunucularında saklanır. Arka planda bulut eşitlemesi yapılmaz. Verilerini satmayız.
+</div>
+
+<p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) md. 10 uyarınca aydınlatma yükümlülüğünü yerine getirmek ve Neuro mobil uygulamasının (“Uygulama”) gizlilik uygulamalarını açıklamak için hazırlanmıştır. Uygulama ilk sürümde yalnızca Türkiye'de dağıtılmaktadır.</p>
+
+<h2>1. Veri sorumlusu</h2>
+<p><strong>Özgür Güçlüoğlu</strong> (bireysel geliştirici)<br>
+E-posta: <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a></p>
+
+<h2>2. Hangi verileri, hangi amaçla işliyoruz?</h2>
+
+<h3>2.1 Yalnızca cihazında saklanan veriler</h3>
+<p>Aşağıdaki veriler cihazındaki yerel veritabanında (Isar ve SharedPreferences) tutulur, <strong>geliştiriciye iletilmez</strong> ve uygulamayı sildiğinde ya da uygulama verilerini temizlediğinde silinir:</p>
+<ul>
+  <li>Ad ve soyad; isteğe bağlı olarak yaş, boy ve kilo,</li>
+  <li>başlangıç hedeflerin ve kalibrasyon sonuçların,</li>
+  <li>egzersiz sonuçları, tepki süreleri ve bilişsel alan skorları,</li>
+  <li>skorlar, puanlar, seriler, oyun seviyeleri ve Arena maç sonuçları,</li>
+  <li>hatırlatma saati ve uygulama ayarları (ses, yazı boyutu, kontrast vb.).</li>
+</ul>
+<p>Amaç: sana özel antrenman programı, ilerleme takibi ve zorluk ayarı. <strong>Bilişsel Gelişim Raporu (PDF)</strong> cihazında oluşturulur; yalnızca sen paylaşmayı seçersen (ör. e-posta ya da mesajla) cihazdan çıkar.</p>
+
+<h3>2.2 İsteğe bağlı bulut hesabı (Supabase)</h3>
+<p>Hesap açarsan şu veriler Supabase'in sunucularında saklanır. Bu sunucular <strong>yurt dışında</strong> bulunabilir:</p>
+<ul>
+  <li>e-posta adresi ve kullanıcı kimliği,</li>
+  <li>şifre: Supabase tarafından tek yönlü şifrelenmiş (hash) olarak saklanır, geliştirici göremez,</li>
+  <li>görünen ad: kayıtta girdiğin ad ve soyad,</li>
+  <li>avatar fotoğrafı: yalnızca yüklersen,</li>
+  <li>Arena ELO puanı ve profilin son güncellenme zamanı.</li>
+</ul>
+<p>Amaç: hesabı oluşturmak ve oturum açmak, e-posta doğrulama ve şifre sıfırlama kodlarını göndermek, Arena ve liderlik tablosunda profilini göstermek. <strong>Görünen adın, avatarın ve ELO puanın diğer oyunculara görünür.</strong> Avatar fotoğrafı herkese açık bir bağlantı üzerinden sunulur; kimliğini ortaya koymasını istemediğin bir fotoğraf seçmemeni öneririz.</p>
+
+<h3>2.3 Arena canlı maçları ve sohbet</h3>
+<p>Arena'da çevrimiçi rakip aradığında, hesabın olmasa da aşağıdaki bilgiler Supabase Realtime üzerinden eşleştiğin oyuncuya <strong>anlık</strong> iletilir:</p>
+<ul>
+  <li>rastgele oluşturulmuş oyuncu kimliğin,</li>
+  <li>görünen adın: cihazdaki profil adın,</li>
+  <li>Arena puanın ve seçtiğin tema,</li>
+  <li>maç sırasındaki hamleler ve skorlar,</li>
+  <li>hazır sohbet ifadeleri ile yazdığın sohbet mesajları.</li>
+</ul>
+<p>Bu veriler uygulama tarafından sunucuda <strong>kalıcı olarak saklanmaz</strong>. Çevrimiçi rakip bulunamazsa cihazdaki bir bota eşleşirsin.</p>
+
+<h3>2.4 Reklamlar (Google AdMob)</h3>
+<p>Uygulama, isteğe bağlı <strong>ödüllü reklamlar</strong> için Google Mobile Ads SDK'sını kullanır. Google bu kapsamda reklam kimliğini, IP adresini, cihaz ve kullanım bilgilerini reklam sunmak, ölçmek ve kötüye kullanımı önlemek için işler. Pro aboneler reklam izlemez. Reklam kimliğini Android ayarlarından (Google › Reklamlar) sıfırlayabilir ya da silebilirsin. Ayrıntılar için: <a href="https://policies.google.com/technologies/ads" rel="noopener">Google reklam politikası</a>.</p>
+
+<h3>2.5 Abonelikler ve satın almalar (Google Play, RevenueCat)</h3>
+<p>Pro abonelik ve tema satın almaları <strong>Google Play Faturalandırma</strong> ile yapılır. Abonelik durumunu doğrulamak için RevenueCat hizmeti kullanılır; RevenueCat'e satın alma durumu, ürün bilgisi ve <strong>anonim bir uygulama kullanıcı kimliği</strong> iletilir. Kart ve ödeme bilgilerin yalnızca Google tarafından işlenir, <strong>geliştiriciye hiçbir kart bilgisi ulaşmaz</strong>.</p>
+
+<h3>2.6 Yazı tipleri (Google Fonts)</h3>
+<p>Uygulamanın yazı tipi (Inter) ilk kullanımda Google Fonts sunucularından indirilebilir. Bu sırada IP adresin ve teknik cihaz bilgileri Google'a iletilir. İndirilen yazı tipi cihazda önbelleğe alınır.</p>
+
+<h3>2.7 Bildirimler, fotoğraflar ve arka plan</h3>
+<ul>
+  <li><strong>Bildirimler:</strong> Yalnızca cihazında planlanan yerel hatırlatmalar kullanılır. Push bildirim sunucusu yoktur.</li>
+  <li><strong>Fotoğraflar:</strong> Fotoğraf galerine yalnızca avatar seçtiğinde, senin seçtiğin fotoğraf için erişilir. Kamera kullanılmaz.</li>
+  <li><strong>Arka plan eşitleme:</strong> Kapalıdır. Egzersiz verilerin buluta gönderilmez.</li>
+</ul>
+
+<h3>2.8 Destek yazışmaları</h3>
+<p>Bize e-posta gönderirsen, e-posta adresini ve mesajının içeriğini yalnızca talebini yanıtlamak için işleriz.</p>
+
+<h2>3. Hukuki sebepler</h2>
+<p>Kişisel verilerin KVKK md. 5'teki şu hukuki sebeplere dayanılarak işlenir:</p>
+<ul>
+  <li><strong>md. 5/2-c, sözleşmenin kurulması ve ifası:</strong> hesap, Arena, abonelik ve satın alma işlemleri,</li>
+  <li><strong>md. 5/2-f, meşru menfaat:</strong> hizmetin güvenliği, kötüye kullanımın önlenmesi ve destek taleplerinin yanıtlanması,</li>
+  <li><strong>md. 5/2-ç, hukuki yükümlülük:</strong> yetkili makamların yasal talepleri,</li>
+  <li><strong>md. 5/2-e, bir hakkın tesisi, kullanılması veya korunması:</strong> olası uyuşmazlıklar.</li>
+</ul>
+<p><strong>Yurt dışına aktarım (KVKK md. 9):</strong> Supabase, Google ve RevenueCat hizmetleri yurt dışındaki sunucularda çalışabilir. Bulut hesabı verilerinin yurt dışında saklanması için, kayıt sırasında <strong>açık rızan</strong> alınır. Açık rızanı hesabını silerek dilediğin an geri alabilirsin. Hesap açmazsan bu aktarım olmaz ve uygulamanın tamamını çevrimdışı kullanmaya devam edersin.</p>
+
+<h2>4. Veriler nerede saklanır?</h2>
+<table class="table">
+  <tr><th>Veri</th><th>Yer</th></tr>
+  <tr><td>Profil, egzersiz sonuçları, skorlar, seviyeler, ayarlar</td><td>Yalnızca cihazın</td></tr>
+  <tr><td>E-posta, şifre (hash), görünen ad, avatar, Arena ELO</td><td>Supabase (yurt dışı)</td></tr>
+  <tr><td>Arena hamleleri ve sohbet</td><td>Supabase Realtime üzerinden anlık iletim, kalıcı saklama yok</td></tr>
+  <tr><td>Reklam verileri</td><td>Google (yurt dışı)</td></tr>
+  <tr><td>Satın alma durumu</td><td>Google Play ve RevenueCat (yurt dışı)</td></tr>
+</table>
+
+<h2>5. Verilerin aktarıldığı üçüncü taraflar</h2>
+<ul>
+  <li><strong>Supabase Inc.:</strong> hesap, veritabanı, dosya depolama ve Realtime altyapısı. <a href="https://supabase.com/privacy" rel="noopener">Gizlilik politikası</a></li>
+  <li><strong>Google LLC / Google Ireland Ltd.:</strong> AdMob reklamları, Google Play Faturalandırma ve Google Fonts. <a href="https://policies.google.com/privacy" rel="noopener">Gizlilik politikası</a></li>
+  <li><strong>RevenueCat Inc.:</strong> abonelik doğrulama. <a href="https://www.revenuecat.com/privacy" rel="noopener">Gizlilik politikası</a></li>
+</ul>
+<p>Bunların dışında kişisel verilerin yalnızca yasal bir zorunluluk olduğunda yetkili kamu kurumlarıyla paylaşılır. Verilerin satılmaz ve reklam amacıyla geliştirici tarafından profillenmez.</p>
+
+<h2>6. Saklama süreleri</h2>
+<ul>
+  <li><strong>Cihazdaki veriler:</strong> Uygulamayı silene veya uygulama verilerini temizleyene kadar.</li>
+  <li><strong>Bulut hesabı verileri:</strong> Hesabını silene kadar. Uygulama içinden silme anında gerçekleşir. E-posta ile gelen silme talepleri <strong>en geç 30 gün</strong> içinde tamamlanır.</li>
+  <li><strong>Arena ve sohbet iletimleri:</strong> Kalıcı olarak saklanmaz.</li>
+  <li><strong>Destek yazışmaları:</strong> Talebin sonuçlandırılması için gereken süre boyunca ve yasal yükümlülükler çerçevesinde.</li>
+  <li><strong>Google ve RevenueCat kayıtları:</strong> Bu şirketlerin kendi saklama politikalarına ve yasal yükümlülüklerine tabidir.</li>
+</ul>
+
+<h2>7. KVKK md. 11 kapsamındaki hakların</h2>
+<p>Veri sorumlusuna başvurarak şu haklarını kullanabilirsin:</p>
+<ul>
+  <li>kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+  <li>işlenmişse buna ilişkin bilgi talep etme,</li>
+  <li>işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+  <li>yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+  <li>eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+  <li>KVKK md. 7 çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+  <li>düzeltme ve silme işlemlerinin, verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+  <li>münhasıran otomatik sistemlerle analiz edilmesi sonucunda aleyhine bir sonuç çıkmasına itiraz etme,</li>
+  <li>kanuna aykırı işleme nedeniyle zarara uğrarsan zararın giderilmesini talep etme.</li>
+</ul>
+<p><strong>Nasıl başvurursun?</strong> Hesabına kayıtlı e-posta adresinden <a href="mailto:destekneuroapp@gmail.com?subject=KVKK%20Ba%C5%9Fvurusu">destekneuroapp@gmail.com</a> adresine, konu satırına “KVKK Başvurusu” yazarak talebini ilet. Başvurun en geç <strong>30 gün</strong> içinde ücretsiz olarak sonuçlandırılır. Yanıttan memnun kalmazsan Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsin. Cihazındaki verileri ise istediğin an kendin silebilirsin (bkz. <a href="hesap-silme.html">Hesap Silme</a>).</p>
+
+<h2>8. Güvenlik</h2>
+<p>Sunucularla iletişim şifreli bağlantı (HTTPS/TLS) üzerinden yapılır. Şifreler tek yönlü olarak saklanır. Veritabanı kuralları her kullanıcının yalnızca kendi profilini ve avatarını değiştirebilmesine izin verir. Hiçbir sistem %100 güvenli değildir. Bir güvenlik ihlali olursa KVKK md. 12 uyarınca ilgili kişileri ve Kurulu bilgilendiririz.</p>
+
+<h2>9. Çocuklar</h2>
+<p>Neuro yetişkinler için tasarlanmıştır ve <strong>13 yaşından küçük çocuklara yönelik değildir</strong>. 13 yaşından küçük bir çocuğa ait bulut verisi işlediğimizi fark edersek bu veriyi sileriz.</p>
+
+<h2>10. Sağlık uyarısı</h2>
+<p class="note">Neuro tıbbi bir cihaz değildir; teşhis ve tedavi için tek başına yeterli değildir. Sağlığınla ilgili kararlar için bir uzmana danış.</p>
+
+<h2>11. Değişiklikler</h2>
+<p>Bu metni zaman zaman güncelleyebiliriz. Güncel sürüm her zaman bu sayfada, “Son güncelleme” tarihiyle yayımlanır ve uygulamadaki Ayarlar › Yasal bölümünden erişilebilir.</p>
+
+<h2>12. İletişim</h2>
+<p>Özgür Güçlüoğlu · <a href="mailto:destekneuroapp@gmail.com">destekneuroapp@gmail.com</a></p>
+
+<footer>
+  <a href="kullanim-kosullari.html">Kullanım Koşulları</a> · <a href="hesap-silme.html">Hesap Silme</a> · <a href="index.html">Ana Sayfa</a><br>
+  © 2026 Özgür Güçlüoğlu · Neuro
+</footer>
+</div>
+</body>
+</html>
